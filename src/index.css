@@ -64,13 +64,18 @@ button:focus-visible {
   align-items: center;
   justify-content: center;
   width: 300px;
-  height: 300px;
+  height: 350px;
   border: 1px solid #213547;
   border-radius: 15px;
 }
 
-.button-container {
+/* .button-container {
   margin: 0 0 34px;
+} */
+
+.disable-button {
+  margin: 1px 0 34px;
+  width: 83px;
 }
 
 @media (prefers-color-scheme: light) {
