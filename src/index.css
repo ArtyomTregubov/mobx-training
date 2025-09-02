@@ -58,24 +58,12 @@ button:focus-visible {
   outline: 2px auto blue;
 }
 
-.counter {
-  display: flex;
-  flex-direction: column;
+.main {
+  width: 100vw;
+  height: 100vh;
+  display: flex; 
+  flex-direction: column; 
   align-items: center;
-  justify-content: center;
-  width: 300px;
-  height: 350px;
-  border: 1px solid #213547;
-  border-radius: 15px;
-}
-
-/* .button-container {
-  margin: 0 0 34px;
-} */
-
-.disable-button {
-  margin: 1px 0 34px;
-  width: 83px;
 }
 
 @media (prefers-color-scheme: light) {
@@ -89,4 +77,50 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+/*-------------------------------------- COUNTER -------------------------------------------------*/
+.counter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 350px;
+  border: 1px solid #213547;
+  border-radius: 15px;
+}
+
+.disable-button {
+  margin: 1px 0 34px;
+  width: 83px;
+}
+
+/*---------------------------------------- CARDS -------------------------------------------------*/
+.cards {
+  width: 100%; 
+  height: 400px;
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+  margin: 6px 3px 3px;
+}
+
+.card-image {
+  width: 100%;
+  height: 200px;
+  border-radius: 8px 8px 0 0;
+}
+
+.card-name {
+  border-radius: 0 0 8px 8px;
+  background-color: #dddddd;
+  width: 100%;
+  text-align: center;
 }

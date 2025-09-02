@@ -5,6 +5,7 @@ import { CounterDouble } from "./CounterDouble"
 import { CounterReset } from "./CounterReset"
 import { CounterDisable } from "./CounterDisable"
 import { useState } from "react"
+import { Cards } from "./Cards"
 
 function App() {
   const [enable, setEnable] = useState<boolean>(false);
@@ -12,22 +13,23 @@ function App() {
   const hideButton = (): void => setEnable(true);
 
   return ( 
-    <div className="counter">
-      <h1>Hello</h1>
-      <DisplayCounter />
-      <div>
-        <CounterIncrement
-          enable={enable}
-         />
-        <CounterDecrement />
+    <div className="main">
+      <div className="counter">
+        <h1>Hello</h1>
+        <DisplayCounter />
+        <div>
+          <CounterIncrement
+            enable={enable} />
+          <CounterDecrement />
+        </div>
+        <div className="button-container">
+          <CounterDouble />
+          <CounterReset />
+        </div>
+        <CounterDisable
+          hideButton={hideButton} />
       </div>
-      <div className="button-container">
-        <CounterDouble />
-        <CounterReset />
-      </div>
-      <CounterDisable
-        hideButton={hideButton}
-      />
+      <Cards />
     </div>
   )
 }
